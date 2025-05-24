@@ -1,0 +1,158 @@
+:root {
+	--card-size: 6vw;
+	--card-front: #88bcff;
+	--game-color: #497fc5;
+	--card-bg-color: #e5efff;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+
+	background-color: var(--game-color);
+}
+
+.wrapper {
+	margin: auto;
+	max-width: max-content;
+	margin-top: 10vh;
+	padding: 3vh;
+
+	border-radius: 12px;
+	background-color: white;
+}
+
+.game__setup {
+	font-size: 18px;
+	margin-bottom: 30px;
+}
+
+.game__setup h1 {
+	margin-bottom: 10px;
+}
+
+.game__area > * {
+	margin-bottom: 3vh;
+}
+
+#pairs-input {
+	width: 50px;
+	font-size: 18px;
+}
+
+#error-message {
+	color: red;
+	margin-top: 5px;
+}
+
+#start-stop-btn {
+	display: block;
+	margin: auto;
+
+	cursor: pointer;
+
+	font-size: 24px;
+
+	background-color: #1f1f1f;
+	color: white;
+
+	padding: 10px 30px;
+	border-radius: 10px;
+}
+
+.game__info {
+	display: flex;
+	flex-direction: column;
+	gap: 4px;
+
+	text-align: right;
+}
+
+.game__field {
+	display: grid;
+	grid-template-columns: repeat(4, var(--card-size));
+	gap: 10px;
+	justify-content: center;
+	width: 100%;
+}
+
+.game__card {
+	width: var(--card-size);
+	height: var(--card-size);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	cursor: pointer;
+
+	font-size: 24px;
+	font-weight: 700;
+
+	position: relative;
+	perspective: 600px;
+}
+
+@media (max-width: 992px) {
+	.wrapper {
+		max-width: 100%;
+		margin: 3vw;
+	}
+
+	:root {
+		--card-size: 16vw;
+	}
+}
+
+@media (max-width: 576px) {
+	:root {
+		--card-size: 20vw;
+	}
+}
+
+.game__card > div {
+	width: 100%;
+	height: 100%;
+
+	border-radius: 10px;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	backface-visibility: hidden;
+	transition: transform 0.5s;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 700;
+	user-select: none;
+}
+
+.card__front {
+	background-color: var(--card-front);
+}
+
+.card__back img {
+	width: 80%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.card__back {
+	background-color: var(--card-bg-color);
+	transform: rotateY(180deg);
+}
+
+.game__card.flip .card__front {
+	transform: rotateY(-180deg);
+}
+
+.game__card.flip .card__back {
+	transform: rotateY(0deg);
+}

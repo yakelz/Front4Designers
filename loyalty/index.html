@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Программа лояльности</title>
+	</head>
+	<body>
+		<div class="page">
+			<div class="wrapper">
+				<!-- Градиент -->
+				<div class="gradient"></div>
+				<!-- Форма -->
+				<main>
+					<section class="form__block">
+						<div class="form__block-header">
+							<h2>Добро пожаловать</h2>
+							<p>
+								Заполните эту форму, чтобы зарегистрироваться и&nbsp;начать пользоваться нашими
+								услугами.
+							</p>
+						</div>
+						<form action="" method="get">
+							<div>
+								<label for="name">Ваше имя:</label>
+								<input type="text" id="name" name="name" required />
+							</div>
+
+							<div>
+								<label for="phone">Телефон:</label>
+								<input type="tel" id="phone" name="phone" required />
+							</div>
+
+							<div>
+								<label for="email">E-mail (опционально):</label>
+								<input type="email" id="email" name="email" />
+							</div>
+
+							<div>
+								<label for="restaurant">Какой ресторан посещаете чаще:</label>
+								<select id="restaurant" name="restaurant" required>
+									<option value="">-- Выберите основной ресторан --</option>
+									<option value="1">Ресторан 1</option>
+									<option value="2">Ресторан 2</option>
+								</select>
+							</div>
+
+							<div class="consent">
+								<input type="checkbox" id="consent" name="consent" required />
+								<label for="consent"
+									>Я принимаю <a href="./consent.html">условия программы лояльности</a></label
+								>
+							</div>
+							<button type="submit">Отправить</button>
+						</form>
+					</section>
+					<!-- Текст -->
+					<section class="text__block">
+						<h2>Присоединяйся!</h2>
+						<p>
+							Участие в&nbsp;программе лояльности дает возможность получать скидки, специальные
+							предложения, накапливать баллы и&nbsp;использовать их&nbsp;при совершении покупок.
+						</p>
+						<p>Ключевые преимущества:</p>
+						<ul>
+							<li>Накопление бонусов и&nbsp;возможность использовать их&nbsp;для оплаты покупок</li>
+							<li>Отслеживание истории покупок и&nbsp;анализ предпочтений</li>
+							<li>Участие в&nbsp;акциях и&nbsp;розыгрышах</li>
+							<li>Персонализированные предложения и&nbsp;рекомендации</li>
+							<li>Возможность участвовать в&nbsp;программах лояльности партнеров</li>
+						</ul>
+					</section>
+				</main>
+
+				<!-- Цитата -->
+				<blockquote class="review">
+					&laquo;Программа лояльности в&nbsp;вашем ресторане превзошло все мои ожидания! Бонусы,
+					скидки и индивидуальный подход сделали моё посещение незабываемым. Я&nbsp;обязательно
+					порекомендую этот ресторан своим друзьям и&nbsp;близким.&raquo; Вероника
+				</blockquote>
+			</div>
+		</div>
+	</body>
+</html>

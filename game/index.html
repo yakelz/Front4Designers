@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<script defer src="./game.js"></script>
+		<title>Игра</title>
+	</head>
+	<body>
+		<div class="wrapper">
+			<main class="game__setup">
+				<h1>Найди пару</h1>
+				<label for="pairs-input">Сколько пар карточек? (1-10): </label>
+				<input type="number" id="pairs-input" min="1" max="10" value="4" />
+				<div id="error-message"></div>
+			</main>
+
+			<main class="game__area" style="display: none">
+				<div class="game__info">
+					<div class="game__moves"><strong>Moves: </strong><span id="moves">0</span></div>
+					<div class="game__timer"><strong>Time: </strong><span id="time">00:00</span></div>
+				</div>
+				<div class="game__field"></div>
+			</main>
+
+			<button id="start-stop-btn">Начать</button>
+		</div>
+	</body>
+</html>

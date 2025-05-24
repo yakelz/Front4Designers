@@ -1,0 +1,143 @@
+:root {
+	--radius: 18px;
+	--block_padding: 30px;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+
+select:focus,
+input:focus {
+	outline: none;
+}
+
+.page {
+	max-width: 1100px;
+	margin: auto;
+
+	margin-top: 3vh;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	border: 1px solid #dfdfdf;
+	border-radius: var(--radius);
+
+	padding: var(--block_padding);
+}
+
+.gradient {
+	width: 100%;
+	height: 150px;
+
+	background: linear-gradient(to right, #030327, #03d3fe);
+	border-radius: var(--radius);
+}
+
+main {
+	display: flex;
+}
+
+button {
+	width: 100%;
+	background-color: #083980;
+	color: white;
+	font-weight: 700;
+	font-size: 16px;
+	border: none;
+	cursor: pointer;
+	border-radius: 5px;
+	padding: 15px;
+	transition: all 0.2s ease;
+}
+
+button:hover {
+	background-color: #052350;
+}
+
+.text__block {
+	padding: var(--block_padding);
+	width: 55%;
+}
+
+.text__block p {
+	margin-bottom: 10px;
+}
+
+.form__block {
+	border-radius: var(--radius);
+	padding: var(--block_padding);
+	background-color: #eff8ff;
+	width: 45%;
+}
+
+input,
+select {
+	padding: 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	width: 100%;
+	font-size: 16px;
+}
+
+input[type='checkbox'] {
+	width: 20px;
+	height: 20px;
+}
+
+.form__block-header {
+	padding: var(--block_padding);
+	border-radius: var(--radius) var(--radius) 0 0;
+	background-color: #00416a;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.form__block h2,
+.text__block h2 {
+	margin-bottom: 15px;
+}
+
+form > div {
+	margin-bottom: 20px;
+}
+
+.consent {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.review {
+	/* padding: calc(1.2 * var(--block_padding)); */
+	padding: var(--block_padding);
+	border-radius: var(--radius);
+	background-color: #e1ebee;
+	font-style: italic;
+}
+
+@media (max-width: 992px) {
+	:root {
+		--block_padding: 20px;
+	}
+	.page {
+		margin-top: 0;
+	}
+	main {
+		flex-direction: column;
+	}
+
+	.form__block,
+	.text__block {
+		width: 100%;
+	}
+}
