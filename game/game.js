@@ -147,7 +147,9 @@ function createCardElement(id, imgSrc) {
 
 function onCardClick(e) {
 	if (lockBoard) return;
-	const card = e.currentTarget;
+	const card = e.currentTarget; //parentElement (flipper)
+	console.log(e.target);
+	console.log(card);
 	if (card === firstCard) return; // нельзя открыть ту же карту дважды
 
 	// if (!gameStarted) {

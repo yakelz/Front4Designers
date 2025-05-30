@@ -6,6 +6,16 @@
 body {
 }
 
+a {
+	text-decoration: none;
+	color: #000;
+	transition: all 0.2s;
+}
+
+a:hover {
+	color: #104da3;
+}
+
 ul {
 	list-style-type: none;
 	padding: 0;
@@ -26,13 +36,19 @@ main {
 	margin: 0 3vw;
 }
 
+#loader {
+	text-align: center;
+	padding: 2vh;
+	background-color: #2759a0;
+	color: white;
+}
+
 .product {
 	margin-bottom: 5vh;
-
-	height: 36vh;
-
 	display: flex;
 	gap: 1vw;
+
+	min-height: 35vh;
 }
 
 .product img {
@@ -98,15 +114,21 @@ main {
 }
 
 .product__button {
+	cursor: pointer;
 	height: 40px;
 
 	background-color: #073980;
+	transition: all 0.2s;
 	color: white;
 
 	border-radius: 8px;
 	padding: 12px 36px;
 
 	font-weight: 700;
+}
+
+.product__button:hover {
+	background-color: #0c499e;
 }
 
 .nutrient__value {
@@ -129,8 +151,8 @@ main {
 	width: 100%;
 
 	display: grid;
-	grid-template-columns: auto;
-	/* grid-template-columns: 1fr auto; */
+	/* grid-template-columns: auto; */
+	grid-template-columns: 1fr auto;
 	grid-template-rows: auto auto;
 	align-items: center;
 
@@ -143,6 +165,8 @@ main {
 
 	margin-bottom: 16px;
 	width: 100%;
+	height: 180px;
+
 	object-fit: cover;
 }
 .recommendations__item-price {
@@ -161,6 +185,9 @@ main {
 	}
 	.recommendations__item-price {
 		font-size: 20px;
+	}
+	.recommendations__item-image {
+		height: 20vh;
 	}
 }
 

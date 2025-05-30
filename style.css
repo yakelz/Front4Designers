@@ -23,5 +23,6 @@ main ul {
 }
 
 main a {
+	margin-right: 1vw;
 	font-size: 24px;
 }
